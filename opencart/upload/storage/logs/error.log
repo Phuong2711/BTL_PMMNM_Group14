@@ -1,0 +1,36 @@
+2021-08-13 6:49:35 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php on line 77
+2021-08-13 6:49:37 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php on line 77
+2021-08-13 6:55:22 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php on line 77
+2021-08-13 6:55:24 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php on line 77
+2021-08-13 7:13:14 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php on line 77
+2021-08-13 7:14:51 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php on line 77
+2021-08-13 9:28:18 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:18 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:23 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:23 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:27 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:27 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:31 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:31 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:34 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:34 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:51 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:28:51 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:29:10 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:29:10 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:29:11 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:29:11 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:29:41 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:29:41 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:01 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:01 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:13 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:13 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:51 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:51 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:51 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:51 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:54 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 9:30:54 - PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\opencart\upload\catalog\controller\startup\startup.php on line 166
+2021-08-13 12:53:01 - PHP Unknown:  Required parameter $store_id follows optional parameter $product_ids in C:\xampp\htdocs\opencart\upload\admin\model\extension\advertise\google.php on line 341
+2021-08-13 12:53:01 - PHP Unknown:  Required parameter $store_id follows optional parameter $data in C:\xampp\htdocs\opencart\upload\admin\model\extension\advertise\google.php on line 413
