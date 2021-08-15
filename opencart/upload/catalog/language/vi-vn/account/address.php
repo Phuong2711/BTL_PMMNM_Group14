@@ -15,7 +15,7 @@ $_['text_empty']           = 'Địa chỉ của bạn vào hồ sơ bị khai t
 
 // Entry
 $_['entry_firstname']   = 'Tên:';
-$_['entry_lastname']    = 'Họ và tên lót:';
+$_['entry_lastname']    = 'Họ và tên đệm:';
 $_['entry_company']     = 'Công ty:';
 $_['entry_address_1']   = 'Địa chỉ dòng 1:';
 $_['entry_address_2']   = 'Địa chỉ dòng 2:';
