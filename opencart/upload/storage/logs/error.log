@@ -121,3 +121,5 @@
 2021-08-14 16:29:05 - PHP Unknown:  Required parameter $store_id follows optional parameter $product_ids in C:\xampp\htdocs\opencart\upload\admin\model\extension\advertise\google.php on line 341
 2021-08-14 16:29:05 - PHP Unknown:  Required parameter $store_id follows optional parameter $data in C:\xampp\htdocs\opencart\upload\admin\model\extension\advertise\google.php on line 413
 2021-08-14 16:29:05 - PHP Warning:  googleshopping\Googleshopping::integer(): Argument #1 ($product_id) must be passed by reference, value given in C:\xampp\htdocs\opencart\upload\system\library\googleshopping\googleshopping.php on line 583
+2021-08-15 8:09:00 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php on line 77
+2021-08-15 8:09:02 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php on line 77
