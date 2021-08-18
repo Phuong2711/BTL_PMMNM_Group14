@@ -16,4 +16,6 @@
 ## Bước 5: Tạo database tên opencart
 
 ## Bước 6: Copy nội dung file opencart.sql vào thực thi trong phpMyAdmin
+
 ## Bước 7: Vào link http://localhost/opencart/upload/
+## Bước 8: Vào link admin http://localhost/opencart/upload/admin
