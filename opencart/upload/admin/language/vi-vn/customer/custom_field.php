@@ -1,9 +1,9 @@
 <?php
 // Heading
-$_['heading_title']         = 'Dữ liệu bổ xung';
+$_['heading_title']         = 'Dữ liệu bổ sung';
 
 // Text
-$_['text_success']          = 'Hoàn tất: Bạn đã sửa đổi dữ liệu bổ xung!';
+$_['text_success']          = 'Hoàn tất: Bạn đã sửa đổi dữ liệu bổ sung!';
 $_['text_list']             = 'Danh sách';
 $_['text_add']              = 'Thêm mới';
 $_['text_edit']             = 'Sửa';
@@ -40,10 +40,10 @@ $_['entry_status']          = 'Trạng thái';
 $_['entry_sort_order']      = 'Thứ tự';
 
 // Help
-$_['help_sort_order']       = 'Nếu không đặt, trường dữ liệu bổ xung sẽ hiển thị cuối cùng trong khu vực dữ liệu.';
+$_['help_sort_order']       = 'Nếu không đặt, trường dữ liệu bổ sung sẽ hiển thị cuối cùng trong khu vực dữ liệu.';
 
-$_['text_custom_field']    = 'Dữ liệu bổ xung';
-$_['text_value']           = 'Giá trị bổ xung';
+$_['text_custom_field']    = 'Dữ liệu bổ sung';
+$_['text_value']           = 'Giá trị bổ sung';
 
 // Error
 $_['error_permission']      = 'Cảnh báo: Bạn không đủ quyền hạn thao tác trong khu vực này!';

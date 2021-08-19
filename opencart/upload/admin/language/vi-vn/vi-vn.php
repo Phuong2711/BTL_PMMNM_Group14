@@ -290,7 +290,7 @@ $_['button_generate']               = 'Tạo mới';
 // Tab
 
 $_['tab_action']              = 'Thao tác';
-$_['tab_additional']                = 'Bổ xung';
+$_['tab_additional']                = 'Bổ sung';
 
 $_['tab_address']             = 'Địa chỉ';
 

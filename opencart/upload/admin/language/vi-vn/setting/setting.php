@@ -240,7 +240,7 @@ $_['help_captcha']                     = 'Captcha được sử dụng cho các 
 $_['entry_mail_engine']              = 'Máy chủ Mail';
 $_['help_mail_engine']               = 'Chọn \'Mail\' trừ khi máy chủ của bạn vô hiệu hóa chức năng PHP mail.';
 $_['text_mail_alert']                = 'Thông báo thư đến';
-$_['entry_mail_alert_email']         = 'Thư thông báo bổ xung';
+$_['entry_mail_alert_email']         = 'Thư thông báo bổ sung';
 $_['help_mail_alert_email']          = 'Thêm các Email bạn muốn nhận dược cảnh báo ngoài Email chính, cách nhau bởi dấu phẩy(,)';
 
 
