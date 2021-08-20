@@ -350,3 +350,4 @@ error:1408F10B:SSL routines:ssl3_get_record:wrong version number in C:\xampp\htd
 2021-08-19 13:00:05 - PHP Warning:  fsockopen(): Failed to enable crypto in C:\xampp\htdocs\opencart\upload\system\library\mail\smtp.php on line 87
 2021-08-19 13:00:05 - PHP Warning:  fsockopen(): Unable to connect to ssl://smtp.gmail.com:25 (Unknown error) in C:\xampp\htdocs\opencart\upload\system\library\mail\smtp.php on line 87
 2021-08-19 13:13:59 - PHP Notice:  Error: Could not load mail adaptor smtp! in C:\xampp\htdocs\opencart\upload\system\library\mail.php on line 36
+2021-08-20 2:24:14 - PHP Warning:  rename(C:\xampp\htdocs\opencart\upload\storage\cache\template\e3\e304F22.tmp,C:/xampp/htdocs/opencart/upload/storage/cache/template/e3/e30457bc2ca413df5ddfb4f255ad30b7b00d0249ca9b602dbeb26421bedc4bfd.php): Access is denied (code: 5) in C:\xampp\htdocs\opencart\upload\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 65

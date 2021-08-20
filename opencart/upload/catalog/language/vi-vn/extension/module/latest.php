@@ -1,6 +1,6 @@
 <?php
 // Heading 
-$_['heading_title'] = 'Mới nhất';
+$_['heading_title'] = 'Sản phẩm mới cập nhật';
 
 // Text
 $_['text_reviews']  = 'Dựa trên %s đánh giá.'; 
