@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 20, 2021 lúc 04:32 AM
+-- Thời gian đã tạo: Th8 20, 2021 lúc 12:04 PM
 -- Phiên bản máy phục vụ: 10.4.20-MariaDB
 -- Phiên bản PHP: 8.0.9
 
@@ -110,17 +110,11 @@ CREATE TABLE `oc_api_session` (
 --
 
 INSERT INTO `oc_api_session` (`api_session_id`, `api_id`, `session_id`, `ip`, `date_added`, `date_modified`) VALUES
-(62, 1, '2497a3c34725a26deb48428ac0', '::1', '2021-08-19 20:04:03', '2021-08-19 20:04:03'),
-(53, 1, '54acc37cb12e45771ce53eb50a', '::1', '2021-08-19 19:50:19', '2021-08-19 19:50:19'),
-(60, 1, 'b0345b3f7f48a11a3f5b468479', '::1', '2021-08-19 20:03:55', '2021-08-19 20:03:58'),
-(59, 1, '87afc2e9f00908649e421c7d56', '::1', '2021-08-19 20:03:45', '2021-08-19 20:03:55'),
-(58, 1, '78a55e2509321f2148eb587d84', '::1', '2021-08-19 20:02:53', '2021-08-19 20:02:53'),
-(54, 1, 'df3bd1b480c1d87d9d1a41c6d1', '::1', '2021-08-19 20:02:13', '2021-08-19 20:02:25'),
-(61, 1, '67af6d13e2128df26e0053f274', '::1', '2021-08-19 20:03:58', '2021-08-19 20:04:03'),
-(63, 1, '24e1cbb49a53b60b2b11fb31f4', '::1', '2021-08-20 09:23:06', '2021-08-20 09:23:06'),
-(57, 1, '134caccf644ec7f62da979d72f', '::1', '2021-08-19 20:02:31', '2021-08-19 20:02:43'),
-(56, 1, '7b5b41b7b437068039a42eb9de', '::1', '2021-08-19 20:02:28', '2021-08-19 20:02:28'),
-(55, 1, '8f56a81431c7eca5429ee0f040', '::1', '2021-08-19 20:02:25', '2021-08-19 20:02:28');
+(69, 1, 'ec8070a48a711a0f4113cfa538', '::1', '2021-08-20 16:59:41', '2021-08-20 16:59:41'),
+(70, 1, '243b6e73b758b84054bd2ffc4c', '::1', '2021-08-20 16:59:47', '2021-08-20 16:59:48'),
+(73, 1, '62a5e9ce044b1494e0a2947f76', '::1', '2021-08-20 17:00:41', '2021-08-20 17:00:41'),
+(72, 1, '2da256c36a330989d79fcaf89c', '::1', '2021-08-20 16:59:53', '2021-08-20 17:00:16'),
+(71, 1, '92c2a114d7c263ddf35607a315', '::1', '2021-08-20 16:59:52', '2021-08-20 16:59:52');
 
 -- --------------------------------------------------------
 
@@ -303,7 +297,8 @@ INSERT INTO `oc_cart` (`cart_id`, `api_id`, `customer_id`, `session_id`, `produc
 (50, 0, 5, '089eda6dd4fbc8a56075d3815a', 40, 0, '[]', 1, '2021-08-16 23:04:09'),
 (51, 0, 5, '089eda6dd4fbc8a56075d3815a', 63, 0, '[]', 2, '2021-08-16 23:04:09'),
 (52, 0, 5, '089eda6dd4fbc8a56075d3815a', 67, 0, '[]', 1, '2021-08-16 23:04:09'),
-(78, 0, 8, '0b51eb9cc57b33313b14ec5670', 40, 0, '[]', 1, '2021-08-19 20:03:40');
+(78, 0, 8, '0b51eb9cc57b33313b14ec5670', 40, 0, '[]', 1, '2021-08-19 20:03:40'),
+(90, 0, 0, 'cc9e5f1d10a67d00300b3e1e19', 64, 0, '{\"231\":\"39\"}', 1, '2021-08-20 16:44:03');
 
 -- --------------------------------------------------------
 
@@ -864,6 +859,13 @@ CREATE TABLE `oc_coupon` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Đang đổ dữ liệu cho bảng `oc_coupon`
+--
+
+INSERT INTO `oc_coupon` (`coupon_id`, `name`, `code`, `type`, `discount`, `logged`, `shipping`, `total`, `date_start`, `date_end`, `uses_total`, `uses_customer`, `status`, `date_added`) VALUES
+(8, 'Mã giảm giá 10%', 'NHOM14', 'P', '10.0000', 0, 0, '0.0000', '2021-08-19', '2030-02-28', 10000, '10000', 1, '2021-08-20 16:50:13');
+
 -- --------------------------------------------------------
 
 --
@@ -925,7 +927,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(4, 'VNĐ', 'VNĐ', '', '₫', '', 1.00000000, 1, '2021-08-20 02:29:44');
+(4, 'VNĐ', 'VNĐ', '', '₫', '', 1.00000000, 1, '2021-08-20 09:55:17');
 
 -- --------------------------------------------------------
 
@@ -2040,10 +2042,10 @@ INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, 
 (20, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 0, 1, 'Nguyễn Việt', 'Phương', 'nguyenvietphuong271100@gmail.com', '0329492326', '', '[]', 'Nguyễn Việt', 'Phương', '', 'Làng Nguyên Xá, Bắc Từ Liêm', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Cash On Delivery', 'cod', 'Nguyễn Việt', 'Phương', '', 'Làng Nguyên Xá, Bắc Từ Liêm', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Flat Shipping Rate', 'flat.flat', 'Ship vào giờ hành chính', '8890000.0000', 0, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-19 20:06:53', '2021-08-19 20:06:53'),
 (21, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 6, 1, 'Khách hàng', '1', 'kh1@gmail.com', '+844391310555', '', '', 'Khách hàng', 'Phương', 'ABC Company', 'Kim Bang, Ha Nam', '', 'Ha Nam', '100000', 'Viet Nam', 230, 'Ha Nam', 3775, '', '[]', 'Cash On Delivery', 'cod', 'Khách hàng', 'Phương', 'ABC Company', 'Kim Bang, Ha Nam', '', 'Ha Nam', '100000', 'Viet Nam', 230, 'Ha Nam', 3775, '', '[]', 'Flat Shipping Rate', 'flat.flat', 'Ship vào giờ hành chính', '20931000.0000', 0, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-19 20:09:09', '2021-08-19 20:09:09'),
 (22, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 6, 1, 'Khách hàng', '1', 'kh1@gmail.com', '+844391310555', '', '', 'Khách hàng', 'Phương', 'ABC Company', 'Kim Bang, Ha Nam', '', 'Ha Nam', '100000', 'Viet Nam', 230, 'Ha Nam', 3775, '', '[]', 'Cash On Delivery', 'cod', 'Khách hàng', 'Phương', 'ABC Company', 'Kim Bang, Ha Nam', '', 'Ha Nam', '100000', 'Viet Nam', 230, 'Ha Nam', 3775, '', '[]', 'Flat Shipping Rate', 'flat.flat', '', '39921000.0000', 0, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-19 20:13:58', '2021-08-19 20:13:58'),
-(23, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 6, 1, 'Khách hàng', '1', 'kh1@gmail.com', '+844391310555', '', '', 'Khách hàng', 'Phương', 'ABC Company', 'Kim Bang, Ha Nam', '', 'Ha Nam', '100000', 'Viet Nam', 230, 'Ha Nam', 3775, '', '[]', 'Cash On Delivery', 'cod', 'Khách hàng', 'Phương', 'ABC Company', 'Kim Bang, Ha Nam', '', 'Ha Nam', '100000', 'Viet Nam', 230, 'Ha Nam', 3775, '', '[]', 'Flat Shipping Rate', 'flat.flat', '', '56211000.0000', 1, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-19 22:27:09', '2021-08-19 22:27:11'),
-(24, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 0, 1, 'Khách hàng', '1', 'kh1@gmail.com', '+844391310555', '', '[]', 'Khách hàng', '1', 'ABC Company', 'Kim Bang, Ha Nam', '', 'Ha Nam', '100000', 'Viet Nam', 230, 'Ha Nam', 3775, '', '[]', 'Cash On Delivery', 'cod', 'Khách hàng', '1', 'ABC Company', 'Kim Bang, Ha Nam', '', 'Ha Nam', '100000', 'Viet Nam', 230, 'Ha Nam', 3775, '', '[]', 'Flat Shipping Rate', 'flat.flat', '', '9699000.0000', 1, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-19 22:33:28', '2021-08-19 22:33:36'),
+(26, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 6, 1, 'Khách hàng', 'Phương', 'kh1@gmail.com', '+844391310555', '', '', 'Khách hàng', 'Phương', 'Đại học công nghiệp Hà Nội', 'Số 298 Đ. Cầu Diễn, Minh Khai, Bắc Từ Liêm', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Cash On Delivery', 'cod', 'Khách hàng', 'Phương', 'Đại học công nghiệp Hà Nội', 'Số 298 Đ. Cầu Diễn, Minh Khai, Bắc Từ Liêm', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Flat Shipping Rate', 'flat.flat', 'Shop ship lẹ giúp em -))', '91856800.0000', 9, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-20 16:59:18', '2021-08-20 17:00:16'),
 (17, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 8, 1, 'Nguyễn Việt', 'Phương', 'nguyenvietphuong271100@gmail.com', '0329492326', '', '', 'Nguyễn Việt', 'Phương', '', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Cash On Delivery', 'cod', 'Nguyễn Việt', 'Phương', '', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Flat Shipping Rate', 'flat.flat', 'Đừng ship vào chủ nhật nhen', '19090000.0000', 0, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-19 20:00:03', '2021-08-19 20:00:03'),
-(18, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 8, 1, 'Nguyễn Việt', 'Phương', 'nguyenvietphuong271100@gmail.com', '0329492326', '', '', 'Nguyễn Việt', 'Phương', '', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Cash On Delivery', 'cod', 'Nguyễn Việt', 'Phương', '', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Flat Shipping Rate', 'flat.flat', 'Đừng ship vào chủ nhật nhen', '19090000.0000', 0, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-19 20:00:57', '2021-08-19 20:00:57');
+(18, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 8, 1, 'Nguyễn Việt', 'Phương', 'nguyenvietphuong271100@gmail.com', '0329492326', '', '', 'Nguyễn Việt', 'Phương', '', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Cash On Delivery', 'cod', 'Nguyễn Việt', 'Phương', '', 'Nguyên Xá, Bắc Từ Liêm, Hà Nội', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Flat Shipping Rate', 'flat.flat', 'Đừng ship vào chủ nhật nhen', '19090000.0000', 0, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-19 20:00:57', '2021-08-19 20:00:57'),
+(25, 0, 'INV-2020-00', 0, 'Thế giới điện thoại', 'http://localhost/opencart/upload/', 6, 1, 'Khách hàng', 'Phương', 'kh1@gmail.com', '+844391310555', '', '', 'Khách hàng', 'Phương', 'Đại học công nghiệp Hà Nội', 'Số 298 Đ. Cầu Diễn, Minh Khai, Bắc Từ Liêm', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Cash On Delivery', 'cod', 'Khách hàng', 'Phương', 'Đại học công nghiệp Hà Nội', 'Số 298 Đ. Cầu Diễn, Minh Khai, Bắc Từ Liêm', '', 'Hà Nội', '100000', 'Viet Nam', 230, 'Ha Noi', 3776, '', '[]', 'Flat Shipping Rate', 'flat.flat', 'Ship lẹ giúp em nhe shop', '19298000.0000', 5, 0, '0.0000', 0, '', 3, 4, 'VNĐ', '1.00000000', '::1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36', 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5', '2021-08-20 12:24:05', '2021-08-20 12:26:43');
 
 -- --------------------------------------------------------
 
@@ -2065,8 +2067,10 @@ CREATE TABLE `oc_order_history` (
 --
 
 INSERT INTO `oc_order_history` (`order_history_id`, `order_id`, `order_status_id`, `notify`, `comment`, `date_added`) VALUES
-(40, 24, 1, 0, '', '2021-08-19 22:33:36'),
-(39, 23, 1, 0, '', '2021-08-19 22:27:11');
+(44, 25, 5, 0, '', '2021-08-20 12:26:43'),
+(41, 25, 1, 0, '', '2021-08-20 12:24:07'),
+(46, 26, 9, 0, 'Shipper đang giao nhen', '2021-08-20 17:00:16'),
+(45, 26, 1, 0, '', '2021-08-20 16:59:28');
 
 -- --------------------------------------------------------
 
@@ -2084,6 +2088,19 @@ CREATE TABLE `oc_order_option` (
   `value` text NOT NULL,
   `type` varchar(32) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `oc_order_option`
+--
+
+INSERT INTO `oc_order_option` (`order_option_id`, `order_id`, `order_product_id`, `product_option_id`, `product_option_value_id`, `name`, `value`, `type`) VALUES
+(4, 25, 41, 233, 47, 'Màu sắc', 'Màu hồng', 'radio'),
+(5, 25, 42, 233, 52, 'Màu sắc', 'Màu đen', 'radio'),
+(6, 26, 43, 230, 32, 'Màu sắc', 'Màu hồng', 'radio'),
+(7, 26, 44, 251, 160, 'Màu sắc', 'Màu đen', 'radio'),
+(8, 26, 45, 257, 183, 'Màu sắc', 'Màu hồng', 'radio'),
+(9, 26, 47, 260, 192, 'Màu sắc', 'Màu hồng', 'radio'),
+(10, 26, 48, 229, 31, 'Màu sắc', 'Màu đen', 'radio');
 
 -- --------------------------------------------------------
 
@@ -2119,11 +2136,14 @@ INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `n
 (27, 17, 45, 'Điện thoại iPhone 12 mini 64GB', 'Product 18', 1, '18990000.0000', '18990000.0000', '0.0000', 800),
 (28, 18, 45, 'Điện thoại iPhone 12 mini 64GB', 'Product 18', 1, '18990000.0000', '18990000.0000', '0.0000', 800),
 (35, 22, 67, 'Apple Watch Series 5 40mm GPS (Nhôm Hồng) – Open Box', 'APWSR5', 1, '12041000.0000', '12041000.0000', '0.0000', 0),
-(36, 23, 67, 'Apple Watch Series 5 40mm GPS (Nhôm Hồng) – Open Box', 'APWSR5', 1, '12041000.0000', '12041000.0000', '0.0000', 0),
-(37, 23, 40, 'Điện thoại iPhone Xs Max 64GB', 'product 11', 1, '8790000.0000', '8790000.0000', '0.0000', 0),
-(38, 23, 45, 'Điện thoại iPhone 12 mini 64GB', 'Product 18', 1, '18990000.0000', '18990000.0000', '0.0000', 800),
-(39, 23, 55, 'Điện thoại iPhone 12 64GB', 'ip12pmva', 1, '16290000.0000', '16290000.0000', '0.0000', 0),
-(40, 24, 41, 'Điện thoại iPhone 11 Pro Max 64GB', 'Product 14', 1, '9599000.0000', '9599000.0000', '0.0000', 0);
+(46, 26, 87, 'Điện thoại ASUS ZenFone 7 Pro  đã qua sử dụng', 'ASUS3', 1, '12990000.0000', '12990000.0000', '0.0000', 0),
+(45, 26, 80, 'Máy tính bảng iPad Pro M1 12.9 inch WiFi Cellular 256GB (2021) ', 'IPAD2', 1, '38490000.0000', '38490000.0000', '0.0000', 0),
+(43, 26, 67, 'Apple Watch Series 5 40mm GPS (Nhôm Hồng) – Open Box', 'APWSR5', 1, '12041000.0000', '12041000.0000', '0.0000', 0),
+(44, 26, 74, 'Điện thoại Asus ROG Phone 3', 'AS1', 1, '28490000.0000', '28490000.0000', '0.0000', 0),
+(41, 25, 41, 'Điện thoại iPhone 11 Pro Max 64GB', 'Product 14', 1, '9599000.0000', '9599000.0000', '0.0000', 0),
+(42, 25, 41, 'Điện thoại iPhone 11 Pro Max 64GB', 'Product 14', 1, '9599000.0000', '9599000.0000', '0.0000', 0),
+(47, 26, 83, 'Tai Nghe Mèo Bluetooth, Headphone Tai Mèo Dễ Thương Có Mic,Âm Bass Mạnh Mẽ', 'PK1', 1, '450000.0000', '450000.0000', '0.0000', 0),
+(48, 26, 66, 'Apple Watch S6 44mm viền nhôm dây cao su đen', 'APWSR6', 1, '9491000.0000', '9491000.0000', '0.0000', 0);
 
 -- --------------------------------------------------------
 
@@ -2242,18 +2262,19 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `va
 (63, 21, 'shipping', 'Flat Shipping Rate', '100000.0000', 3),
 (64, 21, 'total', 'Total', '20931000.0000', 9),
 (65, 22, 'sub_total', 'Sub-Total', '39821000.0000', 1),
-(68, 23, 'sub_total', 'Sub-Total', '56111000.0000', 1),
+(79, 26, 'coupon', 'Coupon (NHOM14)', '-10195200.0000', 4),
 (50, 17, 'sub_total', 'Sub-Total', '18990000.0000', 1),
 (51, 17, 'shipping', 'Flat Shipping Rate', '100000.0000', 3),
 (52, 17, 'total', 'Total', '19090000.0000', 9),
 (53, 18, 'sub_total', 'Sub-Total', '18990000.0000', 1),
 (54, 18, 'shipping', 'Flat Shipping Rate', '100000.0000', 3),
 (55, 18, 'total', 'Total', '19090000.0000', 9),
-(69, 23, 'shipping', 'Flat Shipping Rate', '100000.0000', 3),
-(70, 23, 'total', 'Total', '56211000.0000', 9),
-(71, 24, 'sub_total', 'Sub-Total', '9599000.0000', 1),
-(72, 24, 'shipping', 'Flat Shipping Rate', '100000.0000', 3),
-(73, 24, 'total', 'Total', '9699000.0000', 9);
+(78, 26, 'shipping', 'Flat Shipping Rate', '100000.0000', 3),
+(77, 26, 'sub_total', 'Sub-Total', '101952000.0000', 1),
+(80, 26, 'total', 'Total', '91856800.0000', 9),
+(74, 25, 'sub_total', 'Sub-Total', '19198000.0000', 1),
+(75, 25, 'shipping', 'Flat Shipping Rate', '100000.0000', 3),
+(76, 25, 'total', 'Total', '19298000.0000', 9);
 
 -- --------------------------------------------------------
 
@@ -2327,36 +2348,36 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (62, 'VSL4', '', '', '', '', '', '', '', 150, 6, 'catalog/demo/VsmartLive4.jpg', 11, 1, '3590000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 2, '2021-08-14 23:13:13', '2021-08-20 08:18:27'),
 (63, 'VSA3', '', '', '', '', '', '', '', 155, 6, 'catalog/demo/VsmartActive3.jpg', 11, 1, '2990000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 10, '2021-08-14 23:16:12', '2021-08-20 08:19:13'),
 (56, 'Iphone7', '', '', '', '', '', '', '', 30, 6, 'catalog/demo/Iphone7.jpg', 8, 1, '3390000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2021-08-14 22:42:46', '2021-08-19 23:05:01'),
-(55, 'ip12pmva', '', '', '', '', '', '', '', 59, 6, 'catalog/demo/Iphone12_1.jpg', 8, 1, '16290000.0000', 0, 0, '2020-12-21', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 27, '2020-12-21 17:52:50', '2021-08-20 09:31:31'),
-(67, 'APWSR5', '', '', '', '', '', '', '', 149, 6, 'catalog/demo/AppleWatchSeries5.jpg', 0, 1, '12041000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 4, '2021-08-14 23:29:05', '2021-08-19 23:00:41'),
-(40, 'product 11', '', '', '', '', '', '', '', 969, 5, 'catalog/demo/IphoneXS_1.jpg', 8, 1, '8790000.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 53, '2009-02-03 21:07:12', '2021-08-19 23:05:39'),
-(41, 'Product 14', '', '', '', '', '', '', '', 976, 5, 'catalog/demo/Iphone11.jpg', 8, 1, '9599000.0000', 0, 9, '2009-02-03', '500.00000000', 2, '15.00000000', '20.00000000', '5.00000000', 1, 1, 1, 0, 1, 53, '2009-02-03 21:07:26', '2021-08-19 23:03:05'),
+(55, 'ip12pmva', '', '', '', '', '', '', '', 60, 6, 'catalog/demo/Iphone12_1.jpg', 8, 1, '16290000.0000', 0, 0, '2020-12-21', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 27, '2020-12-21 17:52:50', '2021-08-20 09:31:31'),
+(67, 'APWSR5', '', '', '', '', '', '', '', 150, 6, 'catalog/demo/AppleWatchSeries5.jpg', 0, 1, '12041000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 6, '2021-08-14 23:29:05', '2021-08-19 23:00:41'),
+(40, 'product 11', '', '', '', '', '', '', '', 970, 5, 'catalog/demo/IphoneXS_1.jpg', 8, 1, '8790000.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 53, '2009-02-03 21:07:12', '2021-08-19 23:05:39'),
+(41, 'Product 14', '', '', '', '', '', '', '', 975, 5, 'catalog/demo/Iphone11.jpg', 8, 1, '9599000.0000', 0, 9, '2009-02-03', '500.00000000', 2, '15.00000000', '20.00000000', '5.00000000', 1, 1, 1, 0, 1, 54, '2009-02-03 21:07:26', '2021-08-19 23:03:05'),
 (57, 'SSN20', '', '', '', '', '', '', '', 50, 6, 'catalog/demo/SamsungNote20.jpg', 0, 1, '14988000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 4, '2021-08-14 22:47:02', '2021-08-19 23:08:02'),
 (58, 'SSN10', '', '', '', '', '', '', '', 120, 6, 'catalog/demo/SamsungNote10.jpg', 0, 1, '4990000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 4, '2021-08-14 22:49:59', '2021-08-19 23:07:01'),
-(45, 'Product 18', '', '', '', '', '', '', '', 997, 5, 'catalog/demo/Iphone12Mini.jpg', 8, 1, '18990000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 40, '2009-02-03 21:08:17', '2021-08-19 23:04:24'),
-(64, 'HWT', '', '', '', '', '', '', '', 200, 6, 'catalog/demo/HuaweiTab.jpg', 0, 1, '3090000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 4, '2021-08-14 23:19:34', '2021-08-19 23:01:47'),
+(45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/Iphone12Mini.jpg', 8, 1, '18990000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 41, '2009-02-03 21:08:17', '2021-08-19 23:04:24'),
+(64, 'HWT', '', '', '', '', '', '', '', 200, 6, 'catalog/demo/HuaweiTab.jpg', 0, 1, '3090000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 5, '2021-08-14 23:19:34', '2021-08-19 23:01:47'),
 (65, 'MAYCU', '', '', '', '', '', '', '', 50, 6, 'catalog/demo/SamsungNote20.jpg', 0, 1, '7990000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 4, '2021-08-14 23:21:29', '2021-08-19 23:02:21'),
-(66, 'APWSR6', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/AppleWatchSeries6.jpg', 0, 1, '9491000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 11, '2021-08-14 23:27:09', '2021-08-19 23:01:00'),
+(66, 'APWSR6', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/AppleWatchSeries6.jpg', 0, 1, '9491000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 12, '2021-08-14 23:27:09', '2021-08-19 23:01:00'),
 (59, 'SSA51', '', '', '', '', '', '', '', 120, 6, 'catalog/demo/SamsungA51.jpg', 0, 1, '6590000.0000', 0, 0, '2021-08-14', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 10, '2021-08-14 23:02:11', '2021-08-19 23:06:13'),
 (68, 'IP11_1', '', '', '', '', '', '', '', 100, 6, 'catalog/demo/IP11_1.jpg', 8, 1, '14990000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 07:34:18', '2021-08-20 07:34:18'),
 (70, 'IP11_2', '', '', '', '', '', '', '', 100, 6, 'catalog/demo/IP11_3.jpg', 8, 1, '19990000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 07:46:22', '2021-08-20 07:46:22'),
 (71, 'IPXS', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/IPXS1.jpg', 8, 1, '8990000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 07:51:54', '2021-08-20 07:51:54'),
 (72, 'IPX', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/IPX.jpg', 8, 1, '7990000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 07:56:38', '2021-08-20 07:56:38'),
 (73, 'IPXR', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/IPXR.jpg', 8, 1, '12490000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:00:31', '2021-08-20 08:00:31'),
-(74, 'AS1', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Asus_1.jpg', 12, 1, '28490000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:09:54', '2021-08-20 08:11:11'),
+(74, 'AS1', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Asus_1.jpg', 12, 1, '28490000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2021-08-20 08:09:54', '2021-08-20 08:11:11'),
 (75, 'AS2', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Asus_2.jpg', 12, 1, '5990000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:17:23', '2021-08-20 08:17:23'),
 (76, 'VIVO1', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Vivo_1.jpg', 15, 1, '7590000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:23:58', '2021-08-20 08:23:58'),
 (77, 'VIVO2', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Vivo_2.jpg', 15, 1, '3790000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:28:03', '2021-08-20 08:28:03'),
 (78, 'HW2', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/HuaweiTab2.jpg', 0, 1, '2390000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:34:22', '2021-08-20 08:34:22'),
 (79, 'IPAD1', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Ipad1.jpg', 8, 1, '11790000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:38:30', '2021-08-20 08:38:30'),
-(80, 'IPAD2', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Ipad2.jpg', 8, 1, '38490000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:42:04', '2021-08-20 08:42:04'),
+(80, 'IPAD2', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Ipad2.jpg', 8, 1, '38490000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2021-08-20 08:42:04', '2021-08-20 08:42:04'),
 (81, 'SS1', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Samsungtab1.jpg', 13, 1, '16890000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:46:18', '2021-08-20 08:46:18'),
 (82, 'SS2', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Samsungtab2.jpg', 13, 1, '13990000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:52:13', '2021-08-20 08:52:13'),
-(83, 'PK1', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/PK1.jpg', 0, 1, '450000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:55:28', '2021-08-20 08:55:28'),
+(83, 'PK1', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/PK1.jpg', 0, 1, '450000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2021-08-20 08:55:28', '2021-08-20 08:55:28'),
 (84, 'PK2', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/PK2.jpg', 0, 1, '299000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 08:58:22', '2021-08-20 08:58:22'),
 (85, 'XM1', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Xiaomi1.jpg', 14, 1, '15960000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 09:03:33', '2021-08-20 09:03:33'),
 (86, 'XM2', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/Xiaomi2.jpg', 14, 1, '1990000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 09:06:56', '2021-08-20 09:06:56'),
-(87, 'ASUS3', '', '', '', '', '', '', '', 20, 6, 'catalog/demo/Asus_3.jpg', 12, 1, '12990000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2021-08-20 09:15:57', '2021-08-20 09:15:57');
+(87, 'ASUS3', '', '', '', '', '', '', '', 20, 6, 'catalog/demo/Asus_3.jpg', 12, 1, '12990000.0000', 0, 0, '2021-08-20', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2021-08-20 09:15:57', '2021-08-20 09:15:57');
 
 -- --------------------------------------------------------
 
@@ -2889,12 +2910,12 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (44, 232, 65, 15, 62, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (45, 232, 65, 15, 60, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (46, 232, 65, 15, 58, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(47, 233, 41, 15, 61, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(47, 233, 41, 15, 61, 99, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (48, 233, 41, 15, 57, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (49, 233, 41, 15, 59, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (50, 233, 41, 15, 62, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (51, 233, 41, 15, 60, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(52, 233, 41, 15, 58, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(52, 233, 41, 15, 58, 99, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (58, 234, 55, 15, 58, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (54, 234, 55, 15, 57, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (57, 234, 55, 15, 60, 100, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
@@ -3560,6 +3581,7 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('1a3e2fd1fd615f0b57ca4d9b38', '{\"user_id\":\"1\",\"user_token\":\"NbexkmI2t5AR4tRudyrRXUve6CFirjL8\",\"language\":\"en-gb\",\"currency\":\"USD\",\"account\":\"guest\",\"payment_address\":{\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"country_id\":\"230\",\"zone_id\":\"3775\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":[],\"zone\":\"Ha Nam\",\"zone_code\":\"HM\"},\"shipping_address\":{\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"country_id\":\"230\",\"zone_id\":\"3775\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"custom_field\":[]},\"shipping_methods\":{\"flat\":{\"title\":\"Flat Rate\",\"quote\":{\"flat\":{\"code\":\"flat.flat\",\"title\":\"Flat Shipping Rate\",\"cost\":\"5.00\",\"tax_class_id\":\"9\",\"text\":\"$5.00\"}},\"sort_order\":\"1\",\"error\":false}},\"shipping_method\":{\"code\":\"flat.flat\",\"title\":\"Flat Shipping Rate\",\"cost\":\"5.00\",\"tax_class_id\":\"9\",\"text\":\"$5.00\"},\"comment\":\"Don\'t deliver on Sunday\",\"payment_methods\":{\"cod\":{\"code\":\"cod\",\"title\":\"Cash On Delivery\",\"terms\":\"\",\"sort_order\":\"5\"}},\"payment_method\":{\"code\":\"cod\",\"title\":\"Cash On Delivery\",\"terms\":\"\",\"sort_order\":\"5\"},\"order_id\":7,\"customer_id\":\"5\",\"compare\":[\"40\",\"54\"]}', '2021-08-15 09:34:33'),
 ('20a8f747a372b9ee7e001ed821', '{\"api_id\":\"1\"}', '2021-08-19 10:24:52'),
 ('232d890e21552a63646dcb0372', '{\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"account\":\"guest\",\"payment_address\":{\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"1\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"country_id\":\"230\",\"zone_id\":\"3775\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":[],\"zone\":\"Ha Nam\",\"zone_code\":\"HM\"},\"shipping_address\":{\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"1\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"country_id\":\"230\",\"zone_id\":\"3775\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"custom_field\":[]}}', '2021-08-19 15:57:42'),
+('243b6e73b758b84054bd2ffc4c', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-20 10:23:48'),
 ('2497a3c34725a26deb48428ac0', '{\"api_id\":\"1\"}', '2021-08-19 13:28:03'),
 ('24e1cbb49a53b60b2b11fb31f4', '{\"api_id\":\"1\"}', '2021-08-20 02:47:06'),
 ('24ef3dd16a0679822b68cd6b7f', '{\"api_id\":\"1\"}', '2021-08-15 08:33:39'),
@@ -3569,9 +3591,11 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('29180a2e1856ba45bcc3428d42', '{\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"user_id\":\"1\",\"user_token\":\"VHa4uRdEmftnImoGMOPU3F9jbW3fS7kz\",\"customer_id\":\"6\",\"shipping_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"\\u0110\\u1ea1i h\\u1ecdc c\\u00f4ng nghi\\u1ec7p H\\u00e0 N\\u1ed9i\",\"address_1\":\"S\\u1ed1 298 \\u0110. C\\u1ea7u Di\\u1ec5n, Minh Khai, B\\u1eafc T\\u1eeb Li\\u00eam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"H\\u00e0 N\\u1ed9i\",\"zone_id\":\"3776\",\"zone\":\"Ha Noi\",\"zone_code\":\"HI\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null}}', '2021-08-20 00:49:26'),
 ('2ab72f99fd1459de80d7fe0ab7', '{\"user_id\":\"1\",\"user_token\":\"vI0Ha3g9GFgEZDGg45B0tuJ5OBd1Hj8b\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"customer_id\":\"6\",\"shipping_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"zone_id\":\"3775\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"payment_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"zone_id\":\"3775\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null}}', '2021-08-19 12:12:31'),
 ('2d3a97daa0f69eef70328f9205', '{\"language\":\"vi-vn\",\"currency\":\"EUR\",\"user_id\":\"1\",\"user_token\":\"lOFyOsAxo5ZelRM3ao32bseP1u8ffz5P\"}', '2020-12-03 04:20:20'),
+('2da256c36a330989d79fcaf89c', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-20 10:24:16'),
 ('30fe6976ec903579d54d15b79c', '{\"api_id\":\"1\"}', '2021-08-17 13:47:12'),
 ('315efab2af85af1842812c66a7', '{\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"user_id\":\"1\",\"user_token\":\"vmU5k3Wxe8OkbSvxMYBngKGmnBSLU9rL\"}', '2021-08-15 16:22:46'),
 ('31a4d398a362487b5395bb159f', '{\"user_id\":\"1\",\"user_token\":\"5Xon6kTolNLctu7YzceDd56eUlzmO20L\",\"language\":\"en-gb\",\"currency\":\"USD\",\"account\":\"guest\",\"compare\":[]}', '2021-08-15 09:13:00'),
+('32192b2b693b35eaf5ced2e2e4', '{\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"customer_id\":\"6\",\"shipping_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"\\u0110\\u1ea1i h\\u1ecdc c\\u00f4ng nghi\\u1ec7p H\\u00e0 N\\u1ed9i\",\"address_1\":\"S\\u1ed1 298 \\u0110. C\\u1ea7u Di\\u1ec5n, Minh Khai, B\\u1eafc T\\u1eeb Li\\u00eam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"H\\u00e0 N\\u1ed9i\",\"zone_id\":\"3776\",\"zone\":\"Ha Noi\",\"zone_code\":\"HI\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"payment_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"\\u0110\\u1ea1i h\\u1ecdc c\\u00f4ng nghi\\u1ec7p H\\u00e0 N\\u1ed9i\",\"address_1\":\"S\\u1ed1 298 \\u0110. C\\u1ea7u Di\\u1ec5n, Minh Khai, B\\u1eafc T\\u1eeb Li\\u00eam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"H\\u00e0 N\\u1ed9i\",\"zone_id\":\"3776\",\"zone\":\"Ha Noi\",\"zone_code\":\"HI\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null}}', '2021-08-20 05:48:25'),
 ('3313a479413df10d61fe46d3c2', '{\"user_id\":\"1\",\"user_token\":\"lryLqyQzVBCEnWmhImBgpoFlfoq2hwpc\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"customer_id\":\"6\",\"shipping_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"zone_id\":\"3775\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"payment_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"zone_id\":\"3775\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"shipping_methods\":{\"flat\":{\"title\":\"Flat Rate\",\"quote\":{\"flat\":{\"code\":\"flat.flat\",\"title\":\"Flat Shipping Rate\",\"cost\":\"100000\",\"tax_class_id\":\"0\",\"text\":\"100.000\\u20ab\"}},\"sort_order\":\"1\",\"error\":false}},\"shipping_method\":{\"code\":\"flat.flat\",\"title\":\"Flat Shipping Rate\",\"cost\":\"100000\",\"tax_class_id\":\"0\",\"text\":\"100.000\\u20ab\"},\"comment\":\"\",\"payment_methods\":{\"cod\":{\"code\":\"cod\",\"title\":\"Cash On Delivery\",\"terms\":\"\",\"sort_order\":\"5\"}},\"payment_method\":{\"code\":\"cod\",\"title\":\"Cash On Delivery\",\"terms\":\"\",\"sort_order\":\"5\"},\"order_id\":12}', '2021-08-19 07:53:50'),
 ('393f34a44472371b3ee40bb78d', '{\"language\":\"vi-vn\",\"currency\":\"EUR\",\"user_id\":\"1\",\"user_token\":\"eBGxVfQ3BjdTnrFmGzPdSF7gisCcZQkC\"}', '2020-11-26 04:15:20'),
 ('39ae79fcef5d9bc8c507188a0c', '{\"api_id\":\"1\"}', '2021-08-15 09:20:26'),
@@ -3585,12 +3609,14 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('47ed3a49e9a460ea153454a562', '{\"language\":\"vi-vn\",\"currency\":\"EUR\"}', '2020-11-18 18:28:26'),
 ('4dd202df0d77163b6265839ddb', '{\"language\":\"en-gb\",\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"AK8VuNKhVdozwsEXIz1Pyr2thFDwc7Xl\"}', '2021-08-13 16:23:54'),
 ('4e9f3b9c2288079b4d14560e84', '{\"api_id\":\"1\"}', '2021-08-17 14:01:24'),
+('5434f6e79bf4d2a5871ae4b725', '{\"api_id\":\"1\"}', '2021-08-20 05:50:23'),
 ('54acc37cb12e45771ce53eb50a', '{\"api_id\":\"1\"}', '2021-08-19 13:14:19'),
 ('5566f5e45a1bb853bd49cc9a19', '{\"api_id\":\"1\"}', '2021-08-15 09:21:42'),
 ('558cfa43a8e9c03ca438f10219', '{\"user_id\":\"1\",\"user_token\":\"4Wvpl9r9RaIxiNDbJx9XqLf7LOfWOQZf\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-18 13:32:42'),
 ('5698868d109758fa1515e01668', '{\"api_id\":\"1\"}', '2021-08-13 07:29:40'),
 ('5c0f6aed3a7465fb9ae590e27b', '{\"language\":\"vi-vn\",\"currency\":\"EUR\",\"user_id\":\"1\",\"user_token\":\"izGg9pSz29GlNWLH4ivXHdpgt12Z3isr\"}', '2020-12-02 20:38:16'),
 ('615b7ecd73a46128f967c8b796', '{\"api_id\":\"1\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-15 08:34:07'),
+('62a5e9ce044b1494e0a2947f76', '{\"api_id\":\"1\"}', '2021-08-20 10:24:41'),
 ('6533dfd76b3b8f3b106dfb07a4', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"USD\"}', '2021-08-15 15:54:14'),
 ('66e266cab666a3e18aa9889de2', '{\"api_id\":\"1\"}', '2021-08-19 06:09:56'),
 ('678d0c97ce4cb67ed505653b37', '{\"language\":\"en-gb\",\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"cEU5641goUHYlr7QkvOdtv7FfNfoARyr\"}', '2021-08-14 06:51:14'),
@@ -3600,6 +3626,7 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('6a5dfe1fb9d3b65263533f6ed0', '{\"user_id\":\"1\",\"user_token\":\"DzfmuwXzmhTzyThDHOXLgasKPprUVa1d\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-20 02:55:54'),
 ('6b7ced820a27f4b53da9e594b4', '{\"user_id\":\"1\",\"user_token\":\"10o13MP3S6wUwg1PswxA1ePOMThcKokh\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-19 07:39:10'),
 ('6bad5b78cf966b588fb0b2072f', '{\"language\":\"en-gb\",\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"1IPU9hO0zeXOn1XHExaRg3oMbQ8HQaST\"}', '2020-12-21 12:42:36'),
+('6baf6426720202c5257833eeaf', '{\"api_id\":\"1\"}', '2021-08-20 05:51:00'),
 ('6e4df4e76d515948cd59b5a6f0', '{\"api_id\":\"1\"}', '2021-08-16 16:26:52'),
 ('70427e0c899a9fb65f85a729ac', '{\"user_id\":\"1\",\"user_token\":\"OtHoD45j0QG3ajfVkh72kIa47w6H4hLZ\"}', '2021-08-13 07:28:38'),
 ('727caebae3b966829266e8bc83', '{\"api_id\":\"1\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-15 08:55:54'),
@@ -3611,11 +3638,13 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('7b5b41b7b437068039a42eb9de', '{\"api_id\":\"1\"}', '2021-08-19 13:26:28'),
 ('7b7146a0a5eb78fb167c1ca27f', '{\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"user_id\":\"1\",\"user_token\":\"sdKMM3O0uj5g6Qkh9OzGskWXYlJsz0o4\",\"account\":\"guest\",\"payment_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"zone_id\":\"3775\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"shipping_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"zone_id\":\"3775\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"comment\":\"Don\'t deliver on Sunday || \\u0110\\u1eebng ship v\\u00e0o ch\\u1ee7 nh\\u1eadt\",\"order_id\":11,\"customer_id\":\"6\",\"coupon\":\"MGG1\",\"shipping_methods\":{\"flat\":{\"title\":\"Flat Rate\",\"quote\":{\"flat\":{\"code\":\"flat.flat\",\"title\":\"Flat Shipping Rate\",\"cost\":\"5.00\",\"tax_class_id\":\"9\",\"text\":\"5\\u20ab\"}},\"sort_order\":\"1\",\"error\":false}},\"shipping_method\":{\"code\":\"flat.flat\",\"title\":\"Flat Shipping Rate\",\"cost\":\"5.00\",\"tax_class_id\":\"9\",\"text\":\"5\\u20ab\"},\"payment_methods\":{\"cod\":{\"code\":\"cod\",\"title\":\"Cash On Delivery\",\"terms\":\"\",\"sort_order\":\"5\"}},\"payment_method\":{\"code\":\"cod\",\"title\":\"Cash On Delivery\",\"terms\":\"\",\"sort_order\":\"5\"}}', '2021-08-17 14:03:17'),
 ('7e6b5d9f87a446326ed32b3016', '{\"user_id\":\"1\",\"user_token\":\"PlxrF7SRGIAduWwcBkQrd7OwWFtmFFOn\"}', '2021-08-18 14:07:38'),
+('8067aa753694bd1dfa09190b25', '{\"user_id\":\"1\",\"user_token\":\"0bK5IbjqpwMIL74HeOystTZRV4VzxT85\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"customer_id\":\"6\",\"shipping_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"\\u0110\\u1ea1i h\\u1ecdc c\\u00f4ng nghi\\u1ec7p H\\u00e0 N\\u1ed9i\",\"address_1\":\"S\\u1ed1 298 \\u0110. C\\u1ea7u Di\\u1ec5n, Minh Khai, B\\u1eafc T\\u1eeb Li\\u00eam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"H\\u00e0 N\\u1ed9i\",\"zone_id\":\"3776\",\"zone\":\"Ha Noi\",\"zone_code\":\"HI\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"compare\":[\"45\",\"55\"]}', '2021-08-20 06:19:40'),
 ('84cfeb86454e59128ae5c0a464', '{\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"user_id\":\"1\",\"user_token\":\"aaqYTOFR7Jsn06xnZJq32APit1CHH6jz\",\"vouchers\":[]}', '2021-08-19 11:35:16'),
 ('850f7b5f8fa296f59438868bc5', '{\"api_id\":\"1\"}', '2021-08-15 08:34:31'),
 ('8642395b1a9d9147138c58669b', '{\"language\":\"en-gb\",\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"UKEU8yx87HtU54IxCTAT5roNLFy8eEqi\"}', '2020-12-17 04:47:45'),
 ('87afc2e9f00908649e421c7d56', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-19 13:27:55'),
 ('8f56a81431c7eca5429ee0f040', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-19 13:26:28'),
+('92c2a114d7c263ddf35607a315', '{\"api_id\":\"1\"}', '2021-08-20 10:23:52'),
 ('9374f8a9229639e590020f28b9', '{\"language\":\"vi-vn\",\"currency\":\"EUR\",\"user_id\":\"1\",\"user_token\":\"Z31ire22U5qX4bp9qIqm7WBvSg2NhN2V\"}', '2020-11-13 14:57:22'),
 ('95701b779a4b046058440bf0df', '{\"api_id\":\"1\"}', '2021-08-16 16:26:04'),
 ('962820c2375f1ab48ceba79532', '{\"language\":\"vi-vn\",\"currency\":\"EUR\"}', '2020-11-26 02:01:53'),
@@ -3624,14 +3653,17 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('9c034f722d7330d82e0156d218', '{\"api_id\":\"1\"}', '2021-08-17 05:09:54'),
 ('a085df9e566a52bf5f9626dcf1', '{\"user_id\":\"1\",\"user_token\":\"SVXjvLvIGMoeMrt4lKJJskPK55miN1a3\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-14 08:38:22'),
 ('a08ca49cc2b1e2571765445061', '{\"language\":\"en-gb\",\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"OlvEghvSn9C98HhqomZ0QEUp3oCCDkod\"}', '2020-12-16 15:26:04'),
+('a17d7ed16a38a8ac08119ea06f', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-20 05:50:23'),
 ('a53de27208894e346ee050bb83', '{\"user_id\":\"1\",\"user_token\":\"TGkxKcnRhyq7QH698zm9eVPMFARZR0KA\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-13 16:26:43'),
 ('a8d16f97cd563b638e278bbe49', '{\"language\":\"en-gb\",\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"ucrW5r1dA5wnUpEJ8ATUb6ZCNBmb88hI\"}', '2020-11-05 14:52:59'),
 ('a91883469042feee97ba92ce64', '{\"api_id\":\"1\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-15 09:21:42'),
+('ab9013424b12fb499877737294', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-20 05:50:18'),
 ('ac70d2bc89103060c99445f8f6', '{\"user_id\":\"1\",\"user_token\":\"LEOG4aBHT08MgYnqyJLxBdAzmRnTpqfE\"}', '2021-08-18 13:10:29'),
 ('acae74ca5af64a5e6c769f7249', '{\"user_id\":\"1\",\"user_token\":\"RgiPvcBKVZtAexm0WYyFPGNasVnxMyHF\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"customer_id\":\"6\",\"shipping_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"zone_id\":\"3775\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"payment_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"zone_id\":\"3775\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"shipping_methods\":{\"flat\":{\"title\":\"Flat Rate\",\"quote\":{\"flat\":{\"code\":\"flat.flat\",\"title\":\"Flat Shipping Rate\",\"cost\":\"100000\",\"tax_class_id\":\"0\",\"text\":\"100.000\\u20ab\"}},\"sort_order\":\"1\",\"error\":false}},\"shipping_method\":{\"code\":\"flat.flat\",\"title\":\"Flat Shipping Rate\",\"cost\":\"100000\",\"tax_class_id\":\"0\",\"text\":\"100.000\\u20ab\"},\"comment\":\"\",\"payment_methods\":{\"cod\":{\"code\":\"cod\",\"title\":\"Cash On Delivery\",\"terms\":\"\",\"sort_order\":\"5\"}},\"payment_method\":{\"code\":\"cod\",\"title\":\"Cash On Delivery\",\"terms\":\"\",\"sort_order\":\"5\"},\"order_id\":22}', '2021-08-19 13:40:09'),
 ('b0345b3f7f48a11a3f5b468479', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-19 13:27:58'),
 ('b0f70531a08ab48c349f8f377f', '{\"api_id\":\"1\"}', '2021-08-15 09:07:04'),
 ('b233b0ce047cefd840f0843eea', '{\"user_id\":\"1\",\"user_token\":\"qMHFAebC4M8qeFfYoSmWxIjD2bGUTO2i\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-14 17:25:29'),
+('b33bf31131a32a09e6d9c76f08', '{\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"customer_id\":\"6\",\"shipping_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"\\u0110\\u1ea1i h\\u1ecdc c\\u00f4ng nghi\\u1ec7p H\\u00e0 N\\u1ed9i\",\"address_1\":\"S\\u1ed1 298 \\u0110. C\\u1ea7u Di\\u1ec5n, Minh Khai, B\\u1eafc T\\u1eeb Li\\u00eam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"H\\u00e0 N\\u1ed9i\",\"zone_id\":\"3776\",\"zone\":\"Ha Noi\",\"zone_code\":\"HI\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"payment_address\":{\"address_id\":\"3\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"\\u0110\\u1ea1i h\\u1ecdc c\\u00f4ng nghi\\u1ec7p H\\u00e0 N\\u1ed9i\",\"address_1\":\"S\\u1ed1 298 \\u0110. C\\u1ea7u Di\\u1ec5n, Minh Khai, B\\u1eafc T\\u1eeb Li\\u00eam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"H\\u00e0 N\\u1ed9i\",\"zone_id\":\"3776\",\"zone\":\"Ha Noi\",\"zone_code\":\"HI\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null}}', '2021-08-20 10:25:02'),
 ('b5a659f23fdfecedd89ea8073b', '{\"api_id\":\"1\"}', '2021-08-15 08:33:34'),
 ('b6fbed150b78be3c29cd9c78ee', '{\"api_id\":\"1\"}', '2021-08-13 07:30:57'),
 ('ba18de03c6219f4ee4fab976c4', '{\"api_id\":\"1\"}', '2021-08-15 08:34:22'),
@@ -3647,10 +3679,12 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('ca4b43e4aef150db4f1808d34b', '{\"language\":\"en-gb\",\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"1sCd6C1WvFqotjjp9wJAI5QiOy2ZhrHI\",\"customer_id\":\"2\",\"payment_address\":{\"address_id\":\"1\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"2\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"zone_id\":\"3775\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"country_id\":\"230\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":null},\"payment_methods\":[]}', '2021-08-13 07:46:24'),
 ('ca6589991a0a4cd557a5f9fcad', '{\"api_id\":\"1\"}', '2021-08-15 09:27:36'),
 ('ca7c8fec15548e864e473d60e4', '{\"api_id\":\"1\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-15 09:17:06'),
+('cc9e5f1d10a67d00300b3e1e19', '{\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-20 10:11:51'),
 ('cd723b491c14e8b7c5f24f9b19', '{\"api_id\":\"1\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-13 07:29:35'),
 ('cdc7d1d751861d08a54eef7f64', '{\"user_id\":\"1\",\"user_token\":\"ujMdhZZPWIvpAThNLrppeP2OdQm0Pnnu\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-15 03:11:28'),
 ('d5ed4b599e9b51f030f5a2a8d9', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-19 06:09:56'),
 ('d82b2138d5102e480912f3658f', '{\"user_id\":\"1\",\"user_token\":\"Rvx5qLZrCel9jTdMjijox0fU3fULuh3a\",\"language\":\"en-gb\",\"currency\":\"USD\",\"wishlist\":[\"41\"],\"account\":\"guest\",\"guest\":{\"customer_group_id\":\"1\",\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"email\":\"kh1@gmail.com\",\"telephone\":\"+844391310555\",\"custom_field\":[],\"shipping_address\":\"1\"},\"payment_address\":{\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"country_id\":\"230\",\"zone_id\":\"3775\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"custom_field\":[],\"zone\":\"Ha Nam\",\"zone_code\":\"HM\"},\"shipping_address\":{\"firstname\":\"Kh\\u00e1ch h\\u00e0ng\",\"lastname\":\"Ph\\u01b0\\u01a1ng\",\"company\":\"ABC Company\",\"address_1\":\"Kim Bang, Ha Nam\",\"address_2\":\"\",\"postcode\":\"100000\",\"city\":\"Ha Nam\",\"country_id\":\"230\",\"zone_id\":\"3775\",\"country\":\"Viet Nam\",\"iso_code_2\":\"VN\",\"iso_code_3\":\"VNM\",\"address_format\":\"\",\"zone\":\"Ha Nam\",\"zone_code\":\"HM\",\"custom_field\":[]},\"comment\":\"\",\"order_id\":3}', '2021-08-15 08:51:52'),
+('db8032b64c4b55b84449b60194', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-20 05:50:43'),
 ('dd6aa6daa388913c4eca08bd37', '{\"api_id\":\"1\",\"language\":\"en-gb\",\"currency\":\"USD\"}', '2021-08-15 09:27:59'),
 ('df3bd1b480c1d87d9d1a41c6d1', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-19 13:26:25'),
 ('df3db6cf05c22f2dbbdf5ddf22', '{\"api_id\":\"1\"}', '2021-08-15 08:34:15'),
@@ -3659,6 +3693,7 @@ INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
 ('e578b897c523255ffca74f048c', '{\"api_id\":\"1\"}', '2021-08-17 13:56:08'),
 ('e6212b146809174ba9b2677ebd', '{\"api_id\":\"1\"}', '2021-08-15 09:16:34'),
 ('e7599efee941dc3fa78668caf3', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-17 05:09:54'),
+('ec8070a48a711a0f4113cfa538', '{\"api_id\":\"1\"}', '2021-08-20 10:23:41'),
 ('eca83669acfd3aced523230231', '{\"api_id\":\"1\",\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\"}', '2021-08-17 13:47:55'),
 ('ed34d6caa9a7679ab6a6253a83', '{\"api_id\":\"1\"}', '2021-08-15 09:17:11'),
 ('f0a126ce3dd79c1f8617c4ab8c', '{\"language\":\"vi-vn\",\"currency\":\"VN\\u0110\",\"user_id\":\"1\",\"user_token\":\"6ja3yvwGC4tU3J8KZGmhLwW6kjd6Jo8L\"}', '2021-08-19 05:57:09'),
@@ -3920,7 +3955,7 @@ CREATE TABLE `oc_statistics` (
 --
 
 INSERT INTO `oc_statistics` (`statistics_id`, `code`, `value`) VALUES
-(1, 'order_sale', '215275230.0000'),
+(1, 'order_sale', '253871230.0000'),
 (2, 'order_processing', '0.0000'),
 (3, 'order_complete', '0.0000'),
 (4, 'order_other', '0.0000'),
@@ -9359,7 +9394,7 @@ ALTER TABLE `oc_api_ip`
 -- AUTO_INCREMENT cho bảng `oc_api_session`
 --
 ALTER TABLE `oc_api_session`
-  MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT cho bảng `oc_attribute`
@@ -9389,7 +9424,7 @@ ALTER TABLE `oc_banner_image`
 -- AUTO_INCREMENT cho bảng `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT cho bảng `oc_category`
@@ -9407,13 +9442,13 @@ ALTER TABLE `oc_country`
 -- AUTO_INCREMENT cho bảng `oc_coupon`
 --
 ALTER TABLE `oc_coupon`
-  MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `oc_coupon_history`
 --
 ALTER TABLE `oc_coupon_history`
-  MODIFY `coupon_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `coupon_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `oc_coupon_product`
@@ -9629,25 +9664,25 @@ ALTER TABLE `oc_option_value`
 -- AUTO_INCREMENT cho bảng `oc_order`
 --
 ALTER TABLE `oc_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT cho bảng `oc_order_history`
 --
 ALTER TABLE `oc_order_history`
-  MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT cho bảng `oc_order_option`
 --
 ALTER TABLE `oc_order_option`
-  MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `oc_order_product`
 --
 ALTER TABLE `oc_order_product`
-  MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT cho bảng `oc_order_recurring`
@@ -9677,7 +9712,7 @@ ALTER TABLE `oc_order_status`
 -- AUTO_INCREMENT cho bảng `oc_order_total`
 --
 ALTER TABLE `oc_order_total`
-  MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT cho bảng `oc_order_voucher`
