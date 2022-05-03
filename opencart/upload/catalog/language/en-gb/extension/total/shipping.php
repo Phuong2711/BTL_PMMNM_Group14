@@ -1,20 +1,20 @@
 <?php
 // Heading
-$_['heading_title']        = 'Estimate Shipping &amp; Taxes';
+$_['heading_title']        = 'Ước tính phí vận chuyển';
 
 // Text
-$_['text_success']         = 'Success: Your shipping estimate has been applied!';
-$_['text_shipping']        = 'Enter your destination to get a shipping estimate.';
-$_['text_shipping_method'] = 'Please select the preferred shipping method to use on this order.';
+$_['text_success']         = 'Thành công: Ước tính vận chuyển của bạn đã được áp dụng!';
+$_['text_shipping']        = 'Nhập điểm đến của bạn để nhận ước tính vận chuyển.';
+$_['text_shipping_method'] = 'Vui lòng chọn phương thức vận chuyển ưa thích để sử dụng cho đơn đặt hàng này.';
 
 // Entry
-$_['entry_country']        = 'Country';
-$_['entry_zone']           = 'Region / State';
-$_['entry_postcode']       = 'Post Code';
+$_['entry_country']        = 'Quốc Gia';
+$_['entry_zone']           = 'Tỉnh';
+$_['entry_postcode']       = 'Mã bưu điện';
 
 // Error
-$_['error_postcode']       = 'Postcode must be between 2 and 10 characters!';
-$_['error_country']        = 'Please select a country!';
-$_['error_zone']           = 'Please select a region / state!';
-$_['error_shipping']       = 'Warning: Shipping method required!';
-$_['error_no_shipping']    = 'Warning: No Shipping options are available. Please <a href="%s">contact us</a> for assistance!';
+$_['error_postcode']       = 'Mã bưu điện trong khoảng từ 2-10 ký tự!';
+$_['error_country']        = 'Xin hãy chọn quốc gia!';
+$_['error_zone']           = 'Xin hãy chọn tỉnh!';
+$_['error_shipping']       = 'Cảnh báo: Bắt buộc chọn phương thức vận chuyển!';
+$_['error_no_shipping']    = 'Cảnh báo: Không có phương thức vận chuyển khả dụng.';

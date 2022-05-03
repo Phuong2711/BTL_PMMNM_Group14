@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']    = 'Sub-Total';
+$_['heading_title']    = 'Tổng tiền sản phẩm';
 
 // Text
 $_['text_extension']   = 'Extensions';

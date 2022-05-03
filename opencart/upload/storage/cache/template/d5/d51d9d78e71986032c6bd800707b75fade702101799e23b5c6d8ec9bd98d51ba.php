@@ -73,7 +73,7 @@ class __TwigTemplate_1d349270b603df8b897f3cbd8ee9a26624cef046f1b63707927378cbcd0
         // line 12
         echo ($context["column_right"] ?? null);
         echo "</div>
-<marquee style=\"font-size:15px;font-weight:bold; color: red;\">Nhập ngay mã: NHOM14 giảm ngay 10% tổng đơn hàng, áp dụng toàn sàn </marquee>
+<marquee style=\"font-size:15px;font-weight:bold; color: red;\">Nhập ngay mã: THAYQUANGHUY giảm ngay 10% tổng đơn hàng, áp dụng toàn bộ đơn hàng.</marquee>
 </div>
 ";
         // line 15

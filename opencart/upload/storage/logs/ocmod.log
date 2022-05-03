@@ -62,3 +62,42 @@ FILE: system/library/template/twig.php
 CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
 NOT FOUND - OPERATIONS ABORTED!
 ----------------------------------------------------------------
+2022-05-03 13:24:00 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Coupon Without Limit
+
+FILE: admin/controller/marketing/coupon.php
+CODE: if ((utf8_strlen($this->request->post['code']) < 3) || (utf8_strlen($this->request->post['code']) > 10)) {
+LINE: 492
+
+FILE: admin/language/en-gb/marketing/coupon.php
+CODE: $_['error_code']          = 'Code must be between 3 and 10 characters!';
+LINE: 56
+----------------------------------------------------------------

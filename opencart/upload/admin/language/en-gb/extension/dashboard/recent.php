@@ -11,7 +11,7 @@ $_['text_edit']         = 'Edit Dashboard Recent Orders';
 $_['column_order_id']   = 'Order ID';
 $_['column_customer']   = 'Customer';
 $_['column_status']     = 'Status';
-$_['column_total']      = 'Total';
+$_['column_total']      = 'Tổng tiền phải trả';
 $_['column_date_added'] = 'Date Added';
 $_['column_action']     = 'Action';
 

@@ -122,7 +122,7 @@ class __TwigTemplate_c409bc5b955d20f521c57bf197461bcbfb487dcbe54a88f543750a0cacb
             echo "      </ul>
     </div>
   </nav>
-   <marquee style=\"font-size:15px;font-weight:bold; color=#7CFC00;\">Nhập ngay mã: NHOM14 giảm ngay 10% tổng đơn hàng, áp dụng toàn sàn </marquee>
+   <marquee style=\"font-size:15px;font-weight:bold; color=#7CFC00;\">Nhập ngay mã: THAYQUANGHUY giảm ngay 10% tổng đơn hàng, áp dụng toàn bộ đơn hàng.</marquee>
 </div>
 ";
         }

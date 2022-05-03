@@ -16,7 +16,7 @@ $_['column_customer_group'] = 'Customer Group';
 $_['column_status']         = 'Status';
 $_['column_orders']         = 'No. Orders';
 $_['column_products']       = 'No. Products';
-$_['column_total']          = 'Total';
+$_['column_total']          = 'Tổng tiền phải trả';
 $_['column_action']         = 'Action';
 
 // Entry

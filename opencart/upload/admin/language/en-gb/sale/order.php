@@ -67,7 +67,7 @@ $_['column_customer']            = 'Customer';
 $_['column_status']              = 'Status';
 $_['column_date_added']          = 'Date Added';
 $_['column_date_modified']       = 'Date Modified';
-$_['column_total']               = 'Total';
+$_['column_total']               = 'Tổng tiền phải trả';
 $_['column_product']             = 'Product';
 $_['column_model']               = 'Model';
 $_['column_quantity']            = 'Quantity';
@@ -118,7 +118,7 @@ $_['entry_coupon']               = 'Coupon';
 $_['entry_voucher']              = 'Voucher';
 $_['entry_reward']               = 'Reward';
 $_['entry_order_id']             = 'Order ID';
-$_['entry_total']                = 'Total';
+$_['entry_total']                = 'Tổng tiền phải trả';
 $_['entry_date_added']           = 'Date Added';
 $_['entry_date_modified']        = 'Date Modified';
 
