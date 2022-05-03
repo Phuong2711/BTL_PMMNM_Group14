@@ -4,6 +4,7 @@
 ## Bước 1: Cài đặt XAMPP
 
 	download theo link:  https://www.apachefriends.org/download.html\
+	PHP 7.4.29
 
 ## Bước 2: copy thư mục opencart vừa kéo về vào trong thư mục C:\xampp\htdocs
 
